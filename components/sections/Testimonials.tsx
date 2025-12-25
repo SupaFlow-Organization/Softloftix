@@ -127,7 +127,7 @@ const StarRating = ({ rating }: { rating: number }) => {
           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
         </svg>
       ))}
-    </div>
+        </div>
   );
 };
 
@@ -136,14 +136,14 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
     <div className="flex-shrink-0 w-[380px] p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm hover:border-indigo-500/30 transition-all duration-300 hover:bg-black/60">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 border border-white/10 flex items-center justify-center text-sm font-semibold text-white/80">
             {testimonial.initials}
           </div>
           <span className="font-medium text-white font-geist">{testimonial.name}</span>
         </div>
         <StarRating rating={testimonial.rating} />
-      </div>
+            </div>
       
       {/* Content */}
       <p className="text-white/70 text-sm leading-relaxed mb-4 font-geist min-h-[60px]">
@@ -154,7 +154,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       <p className="text-white/40 text-sm font-geist">
         {testimonial.role}, {testimonial.company}
       </p>
-    </div>
+              </div>
   );
 };
 
@@ -170,7 +170,7 @@ const Testimonials = () => {
         <h2 className="text-4xl md:text-5xl font-semibold font-geist tracking-tight text-white animate-on-scroll">
           Testimonials
         </h2>
-      </div>
+            </div>
 
       {/* Marquee Container */}
       <div className="relative">
@@ -185,7 +185,7 @@ const Testimonials = () => {
               <TestimonialCard key={`row1-${testimonial.name}-${index}`} testimonial={testimonial} />
             ))}
           </div>
-        </div>
+            </div>
 
         {/* Row 2 - Moving Right */}
         <div className="overflow-hidden">

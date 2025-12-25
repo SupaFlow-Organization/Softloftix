@@ -46,6 +46,25 @@ select {
   filter: blur(0);
 }
 
+/* Fallback: Show content after a delay if animation doesn't trigger */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    animation: fadeInFallback 0.1s ease-out 0.5s forwards;
+  }
+  
+  .animate-on-scroll.animate {
+    animation: none;
+  }
+}
+
+@keyframes fadeInFallback {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 /* Testimonials Marquee Animations */
 @keyframes marquee-left {
   0% {

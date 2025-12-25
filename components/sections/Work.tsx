@@ -1,23 +1,9 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 const Work = () => {
-  const handleNavClick = useCallback((targetId: string) => {
-    const targetElement = document.getElementById(targetId);
-    const scrollContainer = document.querySelector('.overflow-y-auto');
-    
-    if (targetElement && scrollContainer) {
-      const navbarHeight = 80;
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      
-      scrollContainer.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
 
   return (
     <section className="py-24 border-t relative border-white/5" id="work">
@@ -28,9 +14,7 @@ const Work = () => {
             <h2 className="text-3xl sm:text-5xl font-geist tracking-tighter animate-on-scroll mt-2 text-white">Recent Deployments</h2>
           </div>
           <Link 
-            href="#contact" 
-            onClick={() => handleNavClick('contact')}
-            scroll={false}
+            href="/contact" 
             className="hidden sm:inline-flex text-sm transition font-geist border-b pb-0.5 text-white/60 hover:text-white border-white/20 hover:border-white cursor-pointer"
           >
             View all projects →

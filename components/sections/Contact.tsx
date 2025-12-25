@@ -244,7 +244,7 @@ const Contact = () => {
                   {DAYS.map((day) => (
                     <div key={day} className="text-[10px] font-medium text-indigo-300/50 py-1 font-geist">
                       {day}
-                    </div>
+            </div>
                   ))}
                   
                   {/* Calendar Days */}
@@ -279,7 +279,7 @@ const Contact = () => {
                       </button>
                     );
                   })}
-                </div>
+            </div>
               </div>
 
               {/* Right Panel - Time Slots */}
@@ -346,12 +346,12 @@ const Contact = () => {
                 ) : (
                   <div className="flex items-center justify-center h-[200px] text-white/40 text-xs font-geist">
                     Select a date to see available times
-                  </div>
+            </div>
                 )}
               </div>
             </div>
           </div>
-        </div>
+          </div>
         
         {/* Integration Note */}
         <p className="text-center mt-4 text-xs text-indigo-300/40 font-geist">

@@ -16,17 +16,17 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold tracking-tight font-geist text-white">Services</h4>
             <ul className="mt-3 space-y-2 text-sm text-white/60">
-              <li><Link href="#solutions" scroll={false} className="font-geist transition hover:text-white">Web Development</Link></li>
-              <li><Link href="#solutions" scroll={false} className="font-geist transition hover:text-white">Mobile Apps</Link></li>
-              <li><Link href="#solutions" scroll={false} className="font-geist transition hover:text-white">Cloud Solutions</Link></li>
+              <li><Link href="/services" className="font-geist transition hover:text-white">Web Development</Link></li>
+              <li><Link href="/services" className="font-geist transition hover:text-white">Mobile Apps</Link></li>
+              <li><Link href="/services" className="font-geist transition hover:text-white">Cloud Solutions</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-sm font-semibold tracking-tight font-geist text-white">Company</h4>
             <ul className="mt-3 space-y-2 text-sm text-white/60">
-              <li><Link href="#" scroll={false} className="font-geist transition hover:text-white">About Us</Link></li>
-              <li><Link href="#" scroll={false} className="font-geist transition hover:text-white">Careers</Link></li>
-              <li><Link href="#" scroll={false} className="font-geist transition hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/" className="font-geist transition hover:text-white">About Us</Link></li>
+              <li><Link href="/" className="font-geist transition hover:text-white">Careers</Link></li>
+              <li><Link href="/" className="font-geist transition hover:text-white">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

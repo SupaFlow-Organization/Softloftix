@@ -1,24 +1,10 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Clock, Check, Users, Briefcase } from 'lucide-react';
 
 const Pricing = () => {
-  const handleNavClick = useCallback((targetId: string) => {
-    const targetElement = document.getElementById(targetId);
-    const scrollContainer = document.querySelector('.overflow-y-auto');
-    
-    if (targetElement && scrollContainer) {
-      const navbarHeight = 80;
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      
-      scrollContainer.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
 
   return (
     <section className="sm:p-8 sm:ml-8 sm:mr-8 sm:mb-10 mt-10 mr-8 mb-10 ml-8 pt-6 pr-6 pb-6 pl-6" id="pricing">
@@ -59,9 +45,7 @@ const Pricing = () => {
               <li className="flex items-start gap-3"><Check className="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" /><span className="text-sm font-geist text-white/80">Post-launch Bug Fixes</span></li>
             </ul>
             <Link 
-              href="#contact" 
-              onClick={() => handleNavClick('contact')}
-              scroll={false}
+              href="/contact" 
               className="w-full inline-flex items-center justify-center h-10 rounded-lg text-xs font-medium transition font-geist border bg-white/10 text-white hover:bg-white/20 border-white/10 cursor-pointer"
             >
               Start MVP
@@ -94,9 +78,7 @@ const Pricing = () => {
               <li className="flex items-start gap-3"><Check className="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" /><span className="text-sm font-medium font-geist text-white">Priority Support (Slack Access)</span></li>
             </ul>
             <Link 
-              href="#contact" 
-              onClick={() => handleNavClick('contact')}
-              scroll={false}
+              href="/contact" 
               className="w-full inline-flex items-center justify-center h-10 rounded-lg text-xs font-semibold hover:bg-indigo-500 transition font-geist shadow-[0_0_20px_rgba(79,70,229,0.3)] bg-indigo-600 text-white cursor-pointer"
             >
               Hire Team
@@ -124,9 +106,7 @@ const Pricing = () => {
               <li className="flex items-start gap-3"><Check className="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" /><span className="text-sm font-geist text-white/80">On-premise Solutions</span></li>
             </ul>
             <Link 
-              href="#contact" 
-              onClick={() => handleNavClick('contact')}
-              scroll={false}
+              href="/contact" 
               className="w-full inline-flex items-center justify-center h-10 rounded-lg text-xs font-medium transition font-geist border bg-white/10 text-white hover:bg-white/20 border-white/10 cursor-pointer"
             >
               Contact Sales

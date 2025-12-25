@@ -1,24 +1,10 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Globe, Smartphone, Server } from 'lucide-react';
 
 const Services = () => {
-  const handleNavClick = useCallback((targetId: string) => {
-    const targetElement = document.getElementById(targetId);
-    const scrollContainer = document.querySelector('.overflow-y-auto');
-    
-    if (targetElement && scrollContainer) {
-      const navbarHeight = 80;
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      
-      scrollContainer.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
 
   return (
     <section className="z-10 sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pt-24 pr-6 pb-20 pl-6 relative" id="solutions">
@@ -77,9 +63,7 @@ const Services = () => {
             <p className="mt-4 text-base sm:text-lg font-geist leading-relaxed text-white/70">Future-proof your business. We integrate LLMs, custom chatbots, and automated workflows directly into your existing software ecosystem to reduce operational costs.</p>
             <div className="mt-8 flex gap-4">
               <Link 
-                href="#contact" 
-                onClick={() => handleNavClick('contact')}
-                scroll={false}
+                href="/contact" 
                 className="inline-flex items-center gap-2 text-sm font-medium border border-indigo-500 rounded-lg px-5 py-2.5 hover:bg-indigo-500 transition font-geist shadow-lg text-white bg-indigo-600 shadow-indigo-900/20 cursor-pointer"
               >
                 Consult with an Architect

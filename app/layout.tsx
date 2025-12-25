@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ThreeBackground from '@/components/ui/ThreeBackground';
+import PageLayout from '@/components/layout/PageLayout';
 
 export const metadata: Metadata = {
   title: 'Softloftix — Enterprise Software & App Development',
@@ -28,8 +29,10 @@ export default function RootLayout({
       <body className="antialiased h-full overflow-hidden text-white font-inter">
         <ThreeBackground />
         
-        <div id="root" className="h-full w-full relative z-10">
-          {children}
+        <div id="root" className="fixed inset-0 w-full h-full z-10">
+          <PageLayout>
+            {children}
+          </PageLayout>
         </div>
       </body>
     </html>

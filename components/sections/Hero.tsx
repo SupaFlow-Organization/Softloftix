@@ -1,25 +1,10 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
-  const handleNavClick = useCallback((targetId: string) => {
-    const targetElement = document.getElementById(targetId);
-    const scrollContainer = document.querySelector('.overflow-y-auto');
-    
-    if (targetElement && scrollContainer) {
-      const navbarHeight = 80;
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      
-      scrollContainer.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
-
   return (
     <section className="sm:pt-16 md:pt-32 md:pb-16 text-center max-w-5xl z-10 mr-auto ml-auto pt-16 pb-20 relative">
       
@@ -38,17 +23,13 @@ const Hero = () => {
       </p>
       <div className="flex flex-col sm:flex-row animate-fadeSlideIn [animation-delay:400ms] mt-10 gap-x-4 gap-y-4 items-center justify-center opacity-0">
         <Link 
-          href="#contact" 
-          onClick={() => handleNavClick('contact')}
-          scroll={false}
+          href="/contact" 
           className="group relative inline-flex min-w-[160px] cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[2px] shadow-[0_20px_40px_-15px_rgba(79,70,229,0.3)] overflow-hidden font-semibold tracking-tight rounded-full pt-[14px] pr-[24px] pb-[14px] pl-[24px] items-center justify-center hover:text-white bg-white text-black"
         >
           <span className="relative z-10 font-medium rounded-full font-geist text-black">Start Building</span>
         </Link>
         <Link 
-          href="#expertise" 
-          onClick={() => handleNavClick('expertise')}
-          scroll={false}
+          href="/services" 
           className="inline-flex items-center gap-2 text-base font-medium border rounded-full pt-3.5 pr-6 pb-3.5 pl-6 backdrop-blur font-geist transition-all hover:bg-white/10 text-white/90 bg-white/5 border-white/10 cursor-pointer"
         >
           Explore Services 
