@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Globe, Smartphone, Server } from 'lucide-react';
+import { Globe, Smartphone, Server, ShieldCheck } from 'lucide-react';
 
 const Services = () => {
 
@@ -14,7 +14,7 @@ const Services = () => {
           <h2 className="text-3xl sm:text-5xl font-geist tracking-tighter animate-on-scroll mt-2 text-white">Full-Cycle Development</h2>
         </div>
       </div>
-      <div className="grid gap-6 md:grid-cols-3 gap-x-6 gap-y-6">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-6">
         {/* Card 1: Web */}
         <div className="relative overflow-hidden rounded-2xl border animate-on-scroll group hover:bg-white/[0.07] transition-all duration-300 md:col-span-1 hover:border-indigo-500/30 border-white/10 bg-white/5">
           <div className="sm:p-8 pt-6 pr-6 pb-6 pl-6 h-full flex flex-col">
@@ -51,8 +51,20 @@ const Services = () => {
             <p className="mt-3 text-sm font-geist leading-relaxed text-white/60">Robust APIs, database design, and serverless architecture. We ensure your infrastructure scales automatically as you grow.</p>
           </div>
         </div>
+        {/* Card 4: QA & Testing */}
+        <div className="relative overflow-hidden rounded-2xl border animate-on-scroll group hover:bg-white/[0.07] transition-all duration-300 md:col-span-1 hover:border-indigo-500/30 border-white/10 bg-white/5">
+          <div className="sm:p-8 pt-6 pr-6 pb-6 pl-6 h-full flex flex-col">
+            <div className="flex items-center justify-between mb-6">
+              <div className="p-3 bg-green-500/10 border border-green-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-6 h-6 text-green-400" />
+              </div>
+            </div>
+            <h3 className="text-xl font-medium tracking-tight font-geist text-white">QA & Testing</h3>
+            <p className="mt-3 text-sm font-geist leading-relaxed text-white/60">Comprehensive testing services including manual QA, automated testing, performance testing, and security audits to ensure bug-free releases.</p>
+          </div>
+        </div>
         {/* Feature: Integration/AI */}
-        <div className="group relative overflow-hidden rounded-2xl border md:col-span-3 animate-on-scroll mt-0 hover:border-indigo-500/40 transition-colors border-white/10 bg-white/5">
+        <div className="group relative overflow-hidden rounded-2xl border md:col-span-2 lg:col-span-4 animate-on-scroll mt-0 hover:border-indigo-500/40 transition-colors border-white/10 bg-white/5">
           <div className="absolute inset-0 bg-gradient-to-r to-transparent z-10 from-black via-black/80"></div>
           <div className="absolute right-0 top-0 h-full w-full md:w-2/3 bg-[url(https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2940&auto=format&fit=crop)] bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-700"></div>
           <div className="p-8 sm:p-12 relative z-20 h-full flex flex-col justify-center max-w-2xl">

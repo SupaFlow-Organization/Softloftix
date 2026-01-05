@@ -1,5 +1,5 @@
 import React from 'react';
-import { Atom, Blocks, Server, Smartphone, CloudCog, Database } from 'lucide-react';
+import { Atom, Blocks, Server, Smartphone, CloudCog, Database, Code, Coffee } from 'lucide-react';
 
 const TechStack = () => {
   return (
@@ -35,6 +35,26 @@ const TechStack = () => {
               <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
                 <Database className="w-8 h-8 text-indigo-400" />
                 <span className="font-geist font-semibold text-lg text-white">Supabase</span>
+              </div>
+              <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <Code className="w-8 h-8 text-red-400" />
+                <span className="font-geist font-semibold text-lg text-white">Ruby on Rails</span>
+              </div>
+              <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <Coffee className="w-8 h-8 text-orange-500" />
+                <span className="font-geist font-semibold text-lg text-white">Java</span>
+              </div>
+              <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <Code className="w-8 h-8 text-yellow-400" />
+                <span className="font-geist font-semibold text-lg text-white">Python</span>
+              </div>
+              <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <Database className="w-8 h-8 text-blue-500" />
+                <span className="font-geist font-semibold text-lg text-white">PostgreSQL</span>
+              </div>
+              <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <Database className="w-8 h-8 text-blue-600" />
+                <span className="font-geist font-semibold text-lg text-white">MySQL</span>
               </div>
             </React.Fragment>
           ))}

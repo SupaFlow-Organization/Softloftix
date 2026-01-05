@@ -14,17 +14,17 @@ export default function HireATalentPage() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6 animate-on-scroll">
             Hire World-Class Developers
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed animate-on-scroll">
             Access a curated pool of senior developers, designers, and engineers ready to join your team. Whether you need full-time talent, part-time expertise, or a dedicated project team, we've got you covered.
           </p>
         </div>
 
         {/* Hiring Options */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-6">
               <Users className="w-6 h-6 text-indigo-400" />
             </div>
@@ -40,7 +40,7 @@ export default function HireATalentPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mb-6">
               <Clock className="w-6 h-6 text-purple-400" />
             </div>
@@ -56,7 +56,7 @@ export default function HireATalentPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-green-500/20 border border-green-500/30 flex items-center justify-center mb-6">
               <Code className="w-6 h-6 text-green-400" />
             </div>
@@ -75,7 +75,7 @@ export default function HireATalentPage() {
 
         {/* Why Hire from Us */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center">Why Hire from Softloftix?</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center animate-on-scroll">Why Hire from Softloftix?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex gap-4">
               <div className="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center shrink-0">

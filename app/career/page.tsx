@@ -82,24 +82,24 @@ export default function CareerPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6 animate-on-scroll">
             Build Your Career with Us
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed animate-on-scroll">
             Join a team of passionate engineers, designers, and innovators who are shaping the future of digital products. At Softloftix, you'll work on challenging projects, learn from the best, and grow your career.
           </p>
         </div>
 
         {/* Why Work With Us */}
         <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center">Why Join Softloftix?</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center animate-on-scroll">Why Join Softloftix?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <div 
                   key={index}
-                  className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-indigo-500/30 transition-colors"
+                  className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll"
                 >
                   <div className="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-indigo-400" />
@@ -116,12 +116,12 @@ export default function CareerPage() {
 
         {/* Open Positions */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center">Open Positions</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-12 text-center animate-on-scroll">Open Positions</h2>
           <div className="space-y-4">
             {openPositions.map((position) => (
               <div 
                 key={position.id}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-indigo-500/30 transition-colors"
+                className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-1">
@@ -158,7 +158,7 @@ export default function CareerPage() {
         </div>
 
         {/* Culture Section */}
-        <div className="bg-gradient-to-br from-indigo-950/40 to-purple-950/40 border border-indigo-500/20 rounded-2xl p-8 md:p-12">
+        <div className="bg-gradient-to-br from-indigo-950/40 to-purple-950/40 border border-indigo-500/20 rounded-2xl p-8 md:p-12 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-8 text-center">Our Culture</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -211,19 +211,19 @@ export default function CareerPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-semibold font-geist text-white mb-4">
             Don't See the Right Role?
           </h2>
           <p className="text-white/70 font-geist mb-8 max-w-2xl mx-auto">
             We're always looking for talented individuals. Send us your resume and let's start a conversation.
           </p>
-          <Link 
-            href="/contact"
+          <a 
+            href="mailto:hr.softloftix@gmail.com?subject=Job Application - Resume Submission&body=Hi Softloftix Team,%0D%0A%0D%0AI am interested in joining your team. Please find my resume attached.%0D%0A%0D%0ABest regards,"
             className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-500 hover:bg-indigo-400 text-white font-semibold font-geist rounded-lg transition-all shadow-[0_4px_12px_rgba(99,102,241,0.3)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)]"
           >
             Send Us Your Resume
-          </Link>
+          </a>
         </div>
       </section>
     </div>

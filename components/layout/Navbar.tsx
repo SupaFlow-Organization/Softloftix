@@ -3,22 +3,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Layers, Menu, X, ChevronDown } from 'lucide-react';
+import { Layers, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [hireDropdownOpen, setHireDropdownOpen] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
 
     const handleScroll = () => {
       const scrollContainer = document.querySelector('.overflow-y-auto');
@@ -36,17 +28,12 @@ const Navbar = () => {
       scrollContainer.addEventListener('scroll', handleScroll);
       return () => {
         scrollContainer.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', checkMobile);
       };
     }
-    
-    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const handleLinkClick = useCallback(() => {
     setIsMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
-    setHireDropdownOpen(false);
     setTimeout(() => {
       const scrollContainer = document.querySelector('.overflow-y-auto');
       if (scrollContainer) {
@@ -126,51 +113,17 @@ const Navbar = () => {
                 About Us
               </Link>
 
-              {/* Services Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
+              <Link 
+                href="/services" 
+                onClick={handleLinkClick}
+                className={`text-sm font-semibold font-geist transition-colors cursor-pointer ${
+                  isActive('/services')
+                    ? 'text-indigo-400' 
+                    : 'text-white/80 hover:text-white'
+                }`}
               >
-                <Link 
-                  href="/services" 
-                  onClick={handleLinkClick}
-                  className={`flex items-center gap-1 text-sm font-semibold font-geist transition-colors cursor-pointer ${
-                    isActive('/services')
-                      ? 'text-indigo-400' 
-                      : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  Services
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-                </Link>
-                
-                {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-black/95 backdrop-blur-xl border border-indigo-500/20 rounded-lg shadow-lg overflow-hidden">
-                    <Link 
-                      href="/services" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Web Development
-                    </Link>
-                    <Link 
-                      href="/services" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Mobile Apps
-                    </Link>
-                    <Link 
-                      href="/services" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Cloud Solutions
-                    </Link>
-                  </div>
-                )}
-              </div>
+                Services
+              </Link>
 
               <Link 
                 href="/technologies" 
@@ -196,51 +149,17 @@ const Navbar = () => {
                 Portfolio
               </Link>
 
-              {/* Hire a Talent Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setHireDropdownOpen(true)}
-                onMouseLeave={() => setHireDropdownOpen(false)}
+              <Link 
+                href="/hire-a-talent" 
+                onClick={handleLinkClick}
+                className={`text-sm font-semibold font-geist transition-colors cursor-pointer ${
+                  isActive('/hire-a-talent')
+                    ? 'text-indigo-400' 
+                    : 'text-white/80 hover:text-white'
+                }`}
               >
-                <Link 
-                  href="/hire-a-talent" 
-                  onClick={handleLinkClick}
-                  className={`flex items-center gap-1 text-sm font-semibold font-geist transition-colors cursor-pointer ${
-                    isActive('/hire-a-talent')
-                      ? 'text-indigo-400' 
-                      : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  Hire a Talent
-                  <ChevronDown className={`w-4 h-4 transition-transform ${hireDropdownOpen ? 'rotate-180' : ''}`} />
-                </Link>
-                
-                {hireDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-black/95 backdrop-blur-xl border border-indigo-500/20 rounded-lg shadow-lg overflow-hidden">
-                    <Link 
-                      href="/hire-a-talent" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Full-time Developers
-                    </Link>
-                    <Link 
-                      href="/hire-a-talent" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Part-time Developers
-                    </Link>
-                    <Link 
-                      href="/hire-a-talent" 
-                      onClick={handleLinkClick}
-                      className="block px-4 py-3 text-sm font-geist text-white/80 hover:text-white hover:bg-indigo-500/10 transition-colors"
-                    >
-                      Project-based Teams
-                    </Link>
-                  </div>
-                )}
-              </div>
+                Hire a Talent
+              </Link>
 
               <Link 
                 href="/career" 
@@ -253,7 +172,7 @@ const Navbar = () => {
               >
                 Career
               </Link>
-            </div>
+      </div>
 
             {/* CTA Button */}
             <Link 
@@ -270,19 +189,19 @@ const Navbar = () => {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+      <button 
               className="lg:hidden inline-flex items-center justify-center rounded-lg text-white transition-all p-2"
               style={{
                 backgroundColor: isMobileMenuOpen ? 'rgba(99, 102, 241, 0.3)' : 'rgba(255, 255, 255, 0.1)',
               }}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+      </button>
           </div>
         </div>
 
-        {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown */}
         <div 
           className={`
             lg:hidden
@@ -387,7 +306,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+    </nav>
 
       {/* Spacer to prevent content from going under fixed navbar */}
       <div className="h-16"></div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import TechStack from '@/components/sections/TechStack';
 import type { Metadata } from 'next';
 import { Globe, Smartphone, Server, Database, Cloud, Zap } from 'lucide-react';
 
@@ -14,17 +13,17 @@ export default function TechnologiesPage() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-geist font-semibold tracking-tight text-white mb-6 animate-on-scroll">
             Built with Modern Technology
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 font-geist max-w-3xl mx-auto leading-relaxed animate-on-scroll">
             We leverage cutting-edge frameworks, languages, and tools to build applications that are fast, scalable, and maintainable. Our tech stack evolves with industry standards, ensuring your software stays ahead of the curve.
           </p>
         </div>
 
         {/* Tech Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center mb-6">
               <Globe className="w-6 h-6 text-blue-400" />
             </div>
@@ -40,7 +39,7 @@ export default function TechnologiesPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-6">
               <Smartphone className="w-6 h-6 text-indigo-400" />
             </div>
@@ -56,7 +55,7 @@ export default function TechnologiesPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-green-500/20 border border-green-500/30 flex items-center justify-center mb-6">
               <Server className="w-6 h-6 text-green-400" />
             </div>
@@ -67,12 +66,13 @@ export default function TechnologiesPage() {
             <ul className="space-y-2">
               <li className="text-white/70 font-geist text-sm">• Node.js & Express</li>
               <li className="text-white/70 font-geist text-sm">• Python & Django</li>
+              <li className="text-white/70 font-geist text-sm">• Ruby on Rails</li>
               <li className="text-white/70 font-geist text-sm">• GraphQL</li>
               <li className="text-white/70 font-geist text-sm">• Microservices Architecture</li>
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mb-6">
               <Database className="w-6 h-6 text-purple-400" />
             </div>
@@ -88,7 +88,7 @@ export default function TechnologiesPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mb-6">
               <Cloud className="w-6 h-6 text-orange-400" />
             </div>
@@ -104,7 +104,7 @@ export default function TechnologiesPage() {
             </ul>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:border-indigo-500/30 transition-colors animate-on-scroll">
             <div className="w-12 h-12 rounded-xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center mb-6">
               <Zap className="w-6 h-6 text-pink-400" />
             </div>
@@ -120,9 +120,6 @@ export default function TechnologiesPage() {
             </ul>
           </div>
         </div>
-
-        {/* Tech Stack Component */}
-        <TechStack />
       </section>
     </div>
   );

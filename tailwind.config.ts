@@ -14,7 +14,7 @@ const config: Config = {
       animation: {
         'slideInBlur': 'slideInBlur 0.8s ease-out 1.2s forwards',
         'fadeSlideIn': 'fadeSlideIn 1s ease-out forwards',
-        'marquee': 'marquee 30s linear infinite',
+        'marquee': 'marquee 60s linear infinite',
       },
       keyframes: {
         fadeSlideIn: {

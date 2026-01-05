@@ -31,7 +31,7 @@ export default function RootLayout({
         
         <div id="root" className="fixed inset-0 w-full h-full z-10">
           <PageLayout>
-            {children}
+          {children}
           </PageLayout>
         </div>
       </body>

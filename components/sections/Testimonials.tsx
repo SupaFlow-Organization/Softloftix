@@ -14,103 +14,103 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Varshith Merugu",
+    name: "Arjun Sharma",
     role: "Founder",
-    company: "WassupMediaCo",
+    company: "Desi Digital Co",
     content: "From design to launch, Softloftix made the entire process seamless. Our website now truly reflects our brand's identity.",
     rating: 5,
-    initials: "VM"
+    initials: "AS"
   },
   {
-    name: "Suhair Rahman",
+    name: "Priya Patel",
     role: "Founder",
-    company: "SpainAcademy",
+    company: "BharatLearn Academy",
     content: "Softloftix transformed our website into a sleek, high-performance platform. Our clients love the new experience.",
     rating: 5,
-    initials: "SR"
+    initials: "PP"
   },
   {
-    name: "Francesco",
+    name: "Rahul Verma",
     role: "Founder & CEO",
-    company: "Tremik",
+    company: "TechBharat Solutions",
     content: "The site Softloftix built for us is a game-changer. Stunning visuals and effortless performance—exactly what we needed.",
-    rating: 4,
-    initials: "FR"
+    rating: 5,
+    initials: "RV"
   },
   {
-    name: "Michael Chen",
+    name: "Vikram Reddy",
     role: "CTO",
-    company: "TechVentures",
+    company: "IndiaTech Ventures",
     content: "The team delivered beyond expectations. Our platform handles 10x the traffic with better performance than before.",
     rating: 5,
-    initials: "MC"
+    initials: "VR"
   },
   {
-    name: "Elena Rodriguez",
+    name: "Ananya Iyer",
     role: "Product Lead",
-    company: "InnovateLabs",
+    company: "NovaBharat Labs",
     content: "Working with Softloftix was a breeze. They understood our vision and executed it flawlessly.",
     rating: 5,
-    initials: "ER"
+    initials: "AI"
   },
   {
-    name: "James Wilson",
+    name: "Karthik Nair",
     role: "Director",
-    company: "GlobalTech",
+    company: "GlobalDesi Tech",
     content: "Professional, responsive, and incredibly talented. Our app launch was a massive success thanks to their work.",
     rating: 5,
-    initials: "JW"
+    initials: "KN"
   }
 ];
 
 const testimonials2: Testimonial[] = [
   {
-    name: "Khushi",
+    name: "Neha Gupta",
     role: "Founder",
-    company: "Khushiva",
+    company: "ShopDesi",
     content: "They revamped our e-commerce store, sales have never been better. The site is faster and more user-friendly.",
     rating: 5,
-    initials: "KH"
+    initials: "NG"
   },
   {
-    name: "Satvik",
+    name: "Aditya Kapoor",
     role: "Founder",
-    company: "UpSync Media",
+    company: "MediaWala",
     content: "The team's work is of the highest quality when it comes to building websites. They know exactly what works in your industry and create your site accordingly.",
     rating: 5,
-    initials: "SA"
+    initials: "AK"
   },
   {
-    name: "Alicia Pohl",
+    name: "Meera Joshi",
     role: "Founder",
-    company: "AECreatives",
-    content: "The team helped us kickstart our creative agency in Germany with ease, love them!",
+    company: "CreativeMinds India",
+    content: "The team helped us kickstart our creative agency with ease, absolutely love them!",
     rating: 5,
-    initials: "AP"
+    initials: "MJ"
   },
   {
-    name: "Ruby Liza",
+    name: "Rohan Malhotra",
     role: "CEO",
-    company: "CommerceFlow",
+    company: "BazaarFlow",
     content: "Our e-commerce platform is smoother and faster than ever. Their expertise made a real difference in our conversion rates.",
     rating: 5,
-    initials: "RL"
+    initials: "RM"
   },
   {
-    name: "David Park",
+    name: "Deepak Menon",
     role: "Founder",
-    company: "StartupHub",
+    company: "StartupAdda",
     content: "From concept to deployment, they handled everything. The quality of work exceeded our expectations.",
     rating: 5,
-    initials: "DP"
+    initials: "DM"
   },
   {
-    name: "Sophie Turner",
+    name: "Shreya Bansal",
     role: "Marketing Head",
-    company: "BrandFirst",
+    company: "BrandBharat",
     content: "The website they built has significantly improved our lead generation. Highly recommend their services.",
     rating: 5,
-    initials: "ST"
+    initials: "SB"
   }
 ];
 

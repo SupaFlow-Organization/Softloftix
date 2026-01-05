@@ -14,7 +14,7 @@ export const useScrollAnimation = () => {
     }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" });
 
     const observeElements = () => {
-      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
         // Check if element is already in viewport
         const rect = el.getBoundingClientRect();
         const scrollContainer = document.querySelector('.overflow-y-auto') || window;
@@ -24,7 +24,7 @@ export const useScrollAnimation = () => {
         if (rect.top < containerHeight && rect.bottom > 0 && !el.classList.contains('animate')) {
           el.classList.add("animate");
         } else if (!el.classList.contains('animate')) {
-          observer.observe(el);
+      observer.observe(el);
         }
       });
     };
